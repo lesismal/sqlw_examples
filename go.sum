@@ -1,4 +1,4 @@
 github.com/go-sql-driver/mysql v1.6.0 h1:BCTh4TKNUYmOmMUcQ3IipzF5prigylS7XXjEkfCHuOE=
 github.com/go-sql-driver/mysql v1.6.0/go.mod h1:DCzpHaOWr8IXmIStZouvnhqoel9Qv2LBy8hT2VhHyBg=
-github.com/lesismal/sqlw v0.0.0-20220623051714-6ccf9421d719 h1:IfFEB3NVcFAYFeefHsxAk196wX0zhDM1mefNSWJSOp4=
-github.com/lesismal/sqlw v0.0.0-20220623051714-6ccf9421d719/go.mod h1:54cbG4NdBqhiQevRfcqGujnCfiQ9Hm23sbbONSHCt8A=
+github.com/lesismal/sqlw v0.0.0-20220624071435-4a08df07186e h1:EwM1LeVLbeZV4tMg1oJmAeTncQ7nCbr88+U3RkEJxKo=
+github.com/lesismal/sqlw v0.0.0-20220624071435-4a08df07186e/go.mod h1:54cbG4NdBqhiQevRfcqGujnCfiQ9Hm23sbbONSHCt8A=
