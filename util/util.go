@@ -12,7 +12,7 @@ var (
 	db *sqlw.DB
 
 	DebugLog   = false
-	SqlConnStr = "test:123qwe@tcp(192.168.188.132:3306)/mysql"
+	SqlConnStr = "test:123qwe@tcp(localhost:3306)/mysql"
 )
 
 const (
