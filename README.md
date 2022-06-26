@@ -1,9 +1,5 @@
 # examples for github.com/lesismal/sqlw
 
-## init test sql
-
-- [init.sql](https://github.com/lesismal/sqlw_examples/blob/master/init.sql)
-
 ## usage
 
 ### sqlw.DB
