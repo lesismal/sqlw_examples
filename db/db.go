@@ -98,18 +98,9 @@ func selectTest() {
 	var one util.Model
 	ret, err := db.Select(&one, "select * from sqlw_test.sqlw_test")
 	util.CheckResult("[select one]", ret, err)
-	one = util.Model{}
-	ret, err = db.SelectOne(&one, "select * from sqlw_test.sqlw_test")
-	util.CheckResult("[select one]", ret, err)
 
 	one = util.Model{}
 	ret, err = db.Select(&one, "select * from sqlw_test.sqlw_test order by id asc")
-	util.CheckResult("[select one]", ret, err)
-	if one.Id != 2 || one.I != 20 || one.S != "str_20" {
-		log.Panic(fmt.Errorf("invalid record: %v", one))
-	}
-	one = util.Model{}
-	ret, err = db.SelectOne(&one, "select * from sqlw_test.sqlw_test order by id asc")
 	util.CheckResult("[select one]", ret, err)
 	if one.Id != 2 || one.I != 20 || one.S != "str_20" {
 		log.Panic(fmt.Errorf("invalid record: %v", one))
@@ -121,12 +112,6 @@ func selectTest() {
 	if one.Id != 7 || one.I != 7 || one.S != "str_7" {
 		log.Panic(fmt.Errorf("invalid record: %v", one))
 	}
-	one = util.Model{}
-	ret, err = db.SelectOne(&one, "select * from sqlw_test.sqlw_test order by id desc")
-	util.CheckResult("[select one]", ret, err)
-	if one.Id != 7 || one.I != 7 || one.S != "str_7" {
-		log.Panic(fmt.Errorf("invalid record: %v", one))
-	}
 
 	one = util.Model{}
 	ret, err = db.Select(&one, "select id,i from sqlw_test.sqlw_test order by id asc")
@@ -134,21 +119,9 @@ func selectTest() {
 	if one.I != one.Id*10 || one.S != "" {
 		log.Panic(fmt.Errorf("invalid record: %v", one))
 	}
-	one = util.Model{}
-	ret, err = db.SelectOne(&one, "select id,i from sqlw_test.sqlw_test order by id asc")
-	util.CheckResult("[select one]", ret, err)
-	if one.I != one.Id*10 || one.S != "" {
-		log.Panic(fmt.Errorf("invalid record: %v", one))
-	}
 
 	one = util.Model{}
 	ret, err = db.Select(&one, "select id,s from sqlw_test.sqlw_test order by id desc")
-	util.CheckResult("[select one]", ret, err)
-	if one.I != 0 || one.S != fmt.Sprintf("str_%v", one.Id) {
-		log.Panic(fmt.Errorf("invalid record: %v", one))
-	}
-	one = util.Model{}
-	ret, err = db.SelectOne(&one, "select id,s from sqlw_test.sqlw_test order by id desc")
 	util.CheckResult("[select one]", ret, err)
 	if one.I != 0 || one.S != fmt.Sprintf("str_%v", one.Id) {
 		log.Panic(fmt.Errorf("invalid record: %v", one))

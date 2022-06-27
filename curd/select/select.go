@@ -27,7 +27,7 @@ func main() {
 
 	var model Model
 	selectId := 1
-	result, err := db.SelectOne(&model, "select * from sqlw_test.sqlw_test where id=?", selectId)
+	result, err := db.Select(&model, "select * from sqlw_test.sqlw_test where id=?", selectId)
 	// result, err := db.SelectOne(&model, "select (i,s) from sqlw_test.sqlw_test where id=?", selectId) // select some fields
 	if err != nil {
 		log.Panic(err)
@@ -36,7 +36,7 @@ func main() {
 	log.Println("sql:", result.Sql())
 
 	var models []*Model // type []Model is also fine
-	result, err = db.SelectOne(&models, "select * from sqlw_test.sqlw_test")
+	result, err = db.Select(&models, "select * from sqlw_test.sqlw_test")
 	// result, err = db.SelectOne(&models, "select (i,s) from sqlw_test.sqlw_test") // select some fields
 	if err != nil {
 		log.Panic(err)
