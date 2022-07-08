@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 
+	_ "github.com/go-sql-driver/mysql"
 	"github.com/lesismal/sqlw"
 )
 
